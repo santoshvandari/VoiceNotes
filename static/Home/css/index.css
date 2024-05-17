@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -48,6 +49,121 @@ nav ul li a::before{
 nav ul li a:hover::before{
     width: 100%;
 }
+.NoteContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+.NoteWrapper{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    flex-direction: column;
+}
+/* Notes Options  */
+.NotesOptions{
+    padding: 5px 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.NotesOptions button{
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    border: 2px solid #577B8D;
+    outline: none;
+    background-color: #577B8D;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+    transition: background 0.3s;
+}
+.NotesOptions button:hover{
+    background: #344C64;
+}
+
+/* Notes Writing Section */
+.NotesWriting{
+    width: 100%;
+    padding: 10px;
+}
+.NotesWritingContainer{
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.NoteTitle{
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    outline: none;
+}
+.NoteTitle input{
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #000;
+}
+.NoteBody{
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    outline: none;
+}
+.NoteBody textarea{
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #000;
+    min-height: 50vh;
+    text-align: justify;
+}
+.NotesWritingOptions{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+.NotesWritingOptions button{
+    padding: 10px;
+    font-size: 20px;
+    border: 2px solid #577B8D;
+    outline: none;
+    background-color: #577B8D;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.NotesWritingOptions button:hover{
+    background: #344C64;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 footer{
     background-color: #577B8D;
     color: #f2f2f8;
