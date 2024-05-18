@@ -148,10 +148,11 @@ nav ul li a:hover::before{
     background: #344C64;
 }
 
-
+/* Footer Section Start Here */
 footer{
     background-color: #577B8D;
     color: #f2f2f8;
     text-align: center;
     padding: 10px;
 }
+/* Footer Section Ends Here */
