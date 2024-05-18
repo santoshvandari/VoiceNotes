@@ -8,6 +8,7 @@ body{
     background-color: #344C64;
     font-family: 'Roboto', sans-serif;
 }
+/* Header Section Start Here  */
 header{
     padding: 20px ;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -49,6 +50,7 @@ nav ul li a::before{
 nav ul li a:hover::before{
     width: 100%;
 }
+/* Header Section Ends Here  */
 .NoteContainer{
     display: flex;
     justify-content: center;
