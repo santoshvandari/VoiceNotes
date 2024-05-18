@@ -3,3 +3,5 @@ db.sqlite3
 voicenote/__pycache__/
 Home/__pycache__/
 Home/migrations/__pycache__/
+Auth/__pycache__/
+Auth/migrations/__pycache__/
