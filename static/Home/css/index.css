@@ -51,6 +51,8 @@ nav ul li a:hover::before{
     width: 100%;
 }
 /* Header Section Ends Here  */
+/* Main Section Start here */
+/* Notes Section Start Here */
 .NoteContainer{
     display: flex;
     justify-content: center;
@@ -149,6 +151,9 @@ nav ul li a:hover::before{
 .NotesWritingOptions button:hover{
     background: #344C64;
 }
+/* Notes Section Ends Here */
+
+/* Main Section Ends here */
 
 /* Footer Section Start Here */
 footer{
