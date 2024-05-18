@@ -8,6 +8,7 @@ body{
     background-color: #344C64;
     font-family: 'Roboto', sans-serif;
 }
+/* Header Section Start Here  */
 header{
     padding: 20px ;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -49,6 +50,9 @@ nav ul li a::before{
 nav ul li a:hover::before{
     width: 100%;
 }
+/* Header Section Ends Here  */
+/* Main Section Start here */
+/* Notes Section Start Here */
 .NoteContainer{
     display: flex;
     justify-content: center;
@@ -147,26 +151,15 @@ nav ul li a:hover::before{
 .NotesWritingOptions button:hover{
     background: #344C64;
 }
+/* Notes Section Ends Here */
 
+/* Main Section Ends here */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* Footer Section Start Here */
 footer{
     background-color: #577B8D;
     color: #f2f2f8;
     text-align: center;
     padding: 10px;
 }
+/* Footer Section Ends Here */
