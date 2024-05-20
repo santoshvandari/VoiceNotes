@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.contrib.auth import logout,login
 
 
@@ -15,4 +15,5 @@ def register(request):
 
 def log_out(request):
     logout(request)
+    return redirect('login')
 
