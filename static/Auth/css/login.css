@@ -13,3 +13,68 @@ div.error{
     font-size: 14px;
     /* margin-top: 10px; */
 }
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+div.formContainer{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+}
+div.formWrapper{
+    margin-top: 20px;
+}
+div.formWrapper h1{
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-align: center;
+}
+div.formWrapper form{
+    display: flex;
+    flex-direction: column;
+}
+form label{
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 5px;
+
+}
+form input{
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    font-size: 18px;
+}
+form button{
+    padding: 10px;
+    background-color: #344C64;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    font-size: 18px;
+}
+div.signupoption{
+    margin-top: 20px;
+    text-align: center;
+}
+div.signupoption p{
+    font-size: 16px;
+}
+div.signupoption p a{
+    color: #344C64;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 17px;
+}
+
