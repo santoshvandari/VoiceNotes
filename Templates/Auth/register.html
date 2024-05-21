@@ -14,6 +14,8 @@
                 <div class="formWrapper">
                     <h1>Sign Up</h1>
                     <form>
+                        {% csrf_token %}
+                        <div class="error">{{error}}</div>
                         <label for="username">Username</label>
                         <input type="text" name="username" id="username" placeholder="Enter your username">
                         <label for="firstname">First Name</label>

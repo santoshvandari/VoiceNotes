@@ -13,7 +13,8 @@
             <div class="formcontainer">
                 <div class="formWrapper">
                     <h1>Log In</h1>
-                    <form>
+                    <form method='POST'>
+                        {% csrf_token %}
                         <div class="error">{{error}}</div>
                         <label for="username">Username</label>
                         <input type="text" name="username" id="username" placeholder="Enter your username">
