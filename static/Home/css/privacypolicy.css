@@ -52,9 +52,42 @@ nav ul li a:hover::before{
 }
 /* Header Section Ends Here  */
 /* Main Section Start here */
+/* Privacy Policy Section Start Here  */
+section#privacypolicySection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    text-align: justify;
+}
+.privacyContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 90%;
+    flex-direction: column;
+}
+.privacyContainer h2{
+    color: #fff;
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+.privacyWrapper p{
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.privacyWrapper p span{
+    color: #f2f2f8;
+    font-weight: bold;
+
+}
 
 
-
+/* PrivacyPolicy Section Ends Here  */
 /* Main Section Ends Here */
 /* Footer Section Start Here */
 footer{
