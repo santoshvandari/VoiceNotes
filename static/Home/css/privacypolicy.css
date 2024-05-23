@@ -61,31 +61,29 @@ section#privacypolicySection{
     padding: 20px;
     text-align: justify;
 }
-.aboutContainer{
+.privacyContainer{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
     width: 90%;
     flex-direction: column;
-
 }
-.aboutContainer h2{
+.privacyContainer h2{
     color: #fff;
     font-size: 30px;
     margin-bottom: 20px;
     text-decoration: underline;
 }
-.imgWrapper img{
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    border: 2px solid #fff;
-}
-.aboutWrapper p{
+.privacyWrapper p{
     color: #fff;
     font-size: 20px;
     margin-bottom: 20px;
+}
+.privacyWrapper p span{
+    color: #f2f2f8;
+    font-weight: bold;
+
 }
 
 
