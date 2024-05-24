@@ -108,7 +108,9 @@ form input,form textarea{
     cursor: pointer;
     border-radius: 5px;
 }
-
+.btnWrapper button:hover{
+    background-color: #344C64;
+}
 /* Contact Section Ends Here  */
 /* Main Section Ends Here */
 /* Footer Section Start Here */
