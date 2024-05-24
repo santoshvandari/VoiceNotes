@@ -22,7 +22,25 @@
         </nav>
     </header>
     <main>
-      
+        <section id="contactSection">
+            <div class="contactContainer">
+                <h2>Contact Us</h2>
+                <div class="contactWrapper">
+                    <div class="contactForm">
+                        <form action="#" method="post">
+                            {% csrf_token %}
+                            <label for="fullname">Full Name</label>
+                            <input type="text" name="fullname" id="fullname" placeholder="Enter Your Full Name" required>
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" placeholder="Enter Your Email" required>
+                            <label for="message">Message</label>
+                            <textarea name="message" id="message" cols="30" rows="10" placeholder="Enter Your Message" required></textarea>
+                            <button type="submit">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
         <p>&copy; 2024 Voice Notes</p>
