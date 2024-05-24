@@ -52,9 +52,50 @@ nav ul li a:hover::before{
 }
 /* Header Section Ends Here  */
 /* Main Section Start here */
+/* Contact Section Start Here  */
+section#contactSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    text-align: justify;
+}
+.contactContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 90%;
+    flex-direction: column;
 
+}
+.contactContainer h2{
+    color: #fff;
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+.contactWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-direction: column;
+}
+.contactForm form{
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    width: 100%;
+}
+form label{
+    color: #fff;
+    font-size: 20px;
+}
 
-
+/* Contact Section Ends Here  */
 /* Main Section Ends Here */
 /* Footer Section Start Here */
 footer{
