@@ -76,23 +76,37 @@ section#contactSection{
     margin-bottom: 20px;
     text-decoration: underline;
 }
-.contactWrapper{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    flex-direction: column;
-}
 .contactForm form{
     display: flex;
     justify-content: center;
     align-items: left;
     flex-direction: column;
-    width: 100%;
 }
 form label{
     color: #fff;
     font-size: 20px;
+}
+form input,form textarea{
+    width: 500px;
+    padding: 10px;
+    margin: 5px 0 10px 0;
+    border-radius: 5px;
+    border: none;
+    font-size: 18px;
+}
+.btnWrapper{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px;
+}
+.btnWrapper button{
+    padding: 10px 20px;
+    border: none;
+    background-color: #577B8D;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
 }
 
 /* Contact Section Ends Here  */
