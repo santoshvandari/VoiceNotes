@@ -82,6 +82,19 @@ section#contactSection{
     align-items: left;
     flex-direction: column;
 }
+div.message{
+    text-wrap: wrap;
+    font-size: 20px;
+    text-align: center;
+    margin: 10px 0;
+    width: inherit;
+}
+p.error{
+    color: red;
+}
+p.success{
+    color: green;
+}
 form label{
     color: #fff;
     font-size: 20px;

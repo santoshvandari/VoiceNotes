@@ -27,7 +27,17 @@
                 <h2>Contact Us</h2>
                 <div class="contactWrapper">
                     <div class="contactForm">
-                        <form action="#" method="post">
+                        <form action="/contact/" method="post">
+                            <div class="message">
+                                {% if success %}
+                                    <p class="success">{{ success }}</p>
+                                {% endif %}
+                                {% if error %}
+                                    <p class="error">{{ error }}</p>
+                                {% endif %}
+
+                            </div>
+                
                             {% csrf_token %}
                             <label for="fullname">Full Name</label>
                             <input type="text" name="fullname" id="fullname" placeholder="Enter Your Full Name" required>
