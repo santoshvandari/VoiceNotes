@@ -86,6 +86,8 @@ div.message{
     text-wrap: wrap;
     font-size: 20px;
     text-align: center;
+    margin: 10px 0;
+    width: inherit;
 }
 p.error{
     color: red;
