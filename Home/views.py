@@ -19,6 +19,8 @@ def Contact(request):
         email = (request.POST['email']).strip()
         message = (request.POST['message']).strip()
         if name and email and message:
-            
+            return render(request,'Home/contact.html',{'success':'Thank you for contacting us. We will get back to you soon.'})
+        else:
+            return render(request,'Home/contact.html',{'error':'Please fill all the fields.'})
 
     return render(request,'Home/contact.html')
