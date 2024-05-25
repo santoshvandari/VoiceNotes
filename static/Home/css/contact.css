@@ -83,6 +83,7 @@ section#contactSection{
     flex-direction: column;
 }
 div.message{
+    text-wrap: wrap;
     font-size: 20px;
     text-align: center;
 }

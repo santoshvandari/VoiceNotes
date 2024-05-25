@@ -15,12 +15,15 @@ def About(request):
 
 def Contact(request):
     if request.method == 'POST':
-        name = (request.POST['name']).strip()
+        name = (request.POST['fullname']).strip()
         email = (request.POST['email']).strip()
         message = (request.POST['message']).strip()
         if name and email and message:
-            return render(request,'Home/contact.html',{'success':'Thank you for contacting us. We will get back to you soon.'})
+            try:
+                Contact.objects.create(name=name,email=email,message=message)
+                return render(request,'Home/contact.html',{'success':'Thank you for contacting us. We will get back to you soon.'})
+            except:
+                return render(request,'Home/contact.html',{'error':' * Something went wrong. Please try again later.'})
         else:
-            return render(request,'Home/contact.html',{'error':'Please fill all the fields.'})
-
+            return render(request,'Home/contact.html',{'error':' * Please fill all the fields.'})
     return render(request,'Home/contact.html')
