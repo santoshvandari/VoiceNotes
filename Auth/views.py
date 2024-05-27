@@ -50,5 +50,5 @@ def register(request):
 
 def log_out(request):
     logout(request)
-    return redirect('login')
+    return redirect('/login')
 
