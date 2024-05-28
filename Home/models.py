@@ -1,4 +1,6 @@
 from django.db import models
+from django.contrib.auth.models import User
+
 
 # Create your models here.
 class Contact(models.Model):
@@ -11,4 +13,12 @@ class Contact(models.Model):
         verbose_name_plural='Contacts'
     
 
-
+class UserNotes(models.Model):
+    user=models.ForeignKey(User, on_delete=models.CASCADE)
+    title=models.TextField(blank=False, null=False)
+    note=models.TextField(blank=False, null=False)
+    created_at=models.DateTimeField(auto_now_add=True)
+    updated_at=models.DateTimeField(auto_now=True)
+    class Meta:
+        verbose_name='User Note'
+        verbose_name_plural='User Notes'
