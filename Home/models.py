@@ -1,5 +1,5 @@
 from django.db import models
-from django.db.models import User
+from django.contrib.auth.models import User
 
 
 # Create your models here.
@@ -18,7 +18,7 @@ class UserNotes(models.Model):
     title=models.TextField(blank=False, null=False)
     note=models.TextField(blank=False, null=False)
     created_at=models.DateTimeField(auto_now_add=True)
-    
+    updated_at=models.DateTimeField(auto_now=True)
     class Meta:
         verbose_name='User Note'
         verbose_name_plural='User Notes'
