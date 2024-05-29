@@ -1,5 +1,5 @@
 from django.contrib import admin
-from Home.models import Contact
+from Home.models import Contact,UserNotes
 
 # Register your models here.
 
