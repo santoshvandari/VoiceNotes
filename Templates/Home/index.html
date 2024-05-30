@@ -34,6 +34,7 @@
                     </div>
                     <div class="NotesWriting">
                         <form method="post">
+                            {%csrf_token %}
                         <div class="NotesWritingContainer">
                             <div class="NoteTitle">
                                 <input type="text" name="NoteTitle" id="NoteTitle" placeholder="Title">
