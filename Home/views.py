@@ -7,6 +7,7 @@ def Home(request):
     if request.method == 'POST':
         notetitle = (request.POST['NoteTitle']).strip()
         notebody = (request.POST['noteContent']).strip()
+        print(notetitle,notebody)
         if notetitle and notebody:
             try:
                 usernotes=UserNotes(user=request.user,title=notetitle,note=notebody)
