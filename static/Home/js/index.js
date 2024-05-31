@@ -37,7 +37,7 @@ var speech = true;
         recognition.interimResults = true; 
         // const words = document.querySelector('.words'); 
         // words.appendChild(p); 
-        console.log(p)
+        // console.log(p)
   
         recognition.addEventListener('result', e => { 
             const transcript = Array.from(e.results) 
