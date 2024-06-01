@@ -5,7 +5,6 @@
     console.log(VoiceRecordBtn,NoteContent);
     const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition || window.mozSpeechRecognition || window.msSpeechRecognition)();
     recognition.lang = 'en-US';
-
     recognition.onstart = () => {
             console.log('Listening...');
             VoiceRecordBtn.innerHTML = "Stop Recording";
@@ -29,11 +28,5 @@
         console.log("Start Recording")
         recognition.start();
     });
-
-
-
-
-
-
     }
 )();
