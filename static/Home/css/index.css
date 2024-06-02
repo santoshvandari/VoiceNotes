@@ -74,7 +74,7 @@ nav ul li a:hover::before{
 }
 .NotesOptions button{
     width: 100%;
-    padding: 10px;
+    padding: 10px 20px;
     font-size: 20px;
     border: 2px solid #577B8D;
     outline: none;
@@ -87,6 +87,11 @@ nav ul li a:hover::before{
 }
 .NotesOptions button:hover{
     background: #344C64;
+}
+#RecordingStatus{
+    text-align: center;
+    color: whitesmoke;
+    font-size: 18px;
 }
 
 /* Notes Writing Section */
