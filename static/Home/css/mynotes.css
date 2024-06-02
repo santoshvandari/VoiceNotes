@@ -50,13 +50,27 @@ nav ul li a::before{
 nav ul li a:hover::before{
     width: 100%;
 }
+/* Header Section Ends Here */
+/* Main Section Start Here */
+/* My Notes Section Start Here  */
+#MyNotesSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 50px; */
+}
+div.NotesWrapper{
+    /* width: 80%; */
+}
+table tr{
+    /* width: 100%;  */
+}
 
 
 
 
 
-
-
+/* My Notes Section Ends Here  */
 /* Main Section Ends here */
 
 /* Footer Section Start Here */

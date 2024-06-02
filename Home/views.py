@@ -45,3 +45,6 @@ def ContactUs(request):
         else:
             return render(request,'Home/contact.html',{'error':' * Please fill all the fields.'})
     return render(request,'Home/contact.html')
+
+def MyNotes(request):
+    return render(request,'Home/mynotes.html')
