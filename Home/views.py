@@ -48,3 +48,6 @@ def ContactUs(request):
 
 def MyNotes(request):
     return render(request,'Home/mynotes.html')
+
+def SingleNotes(request,int):
+    return render(request,"Home/SingleNotesView.html")

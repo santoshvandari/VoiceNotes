@@ -57,13 +57,44 @@ nav ul li a:hover::before{
     display: flex;
     justify-content: center;
     align-items: center;
-    /* padding: 50px; */
+    padding: 50px;
+    min-height: 100vh;
+}
+.NotesContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.NotesContainer h3{
+    color: #fff;
+    font-size: 35px;
+    text-align: center;
+    margin: 10px 0;
 }
 div.NotesWrapper{
-    /* width: 80%; */
+   width: 80%;
+   display: flex;
+   justify-content: center;
 }
-table tr{
-    /* width: 100%;  */
+table{
+    border-collapse: collapse;
+    border: 2px solid #fcfcfc;
+}
+table tr th, table tr td{
+    padding: 5px;
+    color: #fcfcfc;
+}
+table tr th{
+    font-size: 20px;
+}
+table tr td{
+    font-size: 18px;
+}
+table tr td a{
+    text-decoration: none;
+    color: #fcf4f4;
 }
 
 
