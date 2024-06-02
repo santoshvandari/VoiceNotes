@@ -9,7 +9,7 @@
     recognition.onstart = () => {
             console.log('Listening...');
             RecordingStatus.textContent= "Listening...";
-            VoiceRecordBtn.innerHTML = "Stop Recording";
+            VoiceRecordBtn.innerHTML = "Stop";
         };
     recognition.onresult = (event) => {
             const transcript = event.results[0][0].transcript;
