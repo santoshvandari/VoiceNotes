@@ -13,7 +13,7 @@
             <div class="formContainer">
                 <div class="formWrapper">
                     <h1>Sign Up</h1>
-                    <form>
+                    <form method="POST">
                         {% csrf_token %}
                         <div class="error">{{error}}</div>
                         <label for="username">Username</label>
@@ -26,6 +26,8 @@
                         <input type="email" name="email" id="email" placeholder="Enter your email">
                         <label for="password">Password</label>
                         <input type="password" name="password" id="password" placeholder="Enter your password">
+                        <label for="cpassword">Confirm Password</label>
+                        <input type="password" name="confirm_password" id="cpassword" placeholder="Re-enter your password">
                         <button type="submit">Sign Up</button>
                     </form>
                 </div>

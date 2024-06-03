@@ -13,8 +13,13 @@ def Home(request):
                 usernotes.save()
                 return render(request,'Home/index.html',{'success':'Note saved successfully.'})
             except Exception as e:
+                data={
+                    'notetitle':notetitle,
+                    'notecontent':notebody,
+                    'error':'* Something went wrong. Please try again later.'
+                }
                 print(e)
-                return render(request,'Home/index.html',{'error':' * Something went wrong. Please try again later.'})
+                return render(request,'Home/index.html',data)
         else:
             data={
                 'notetitle':notetitle,
@@ -22,14 +27,8 @@ def Home(request):
                 'error':'* Please fill all the fields.'
             }
             return render(request,'Home/index.html',data)
-
-    data ="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non optio, similique eveniet a ipsa deleniti facere ipsum veritatis deserunt rerum. Dolorem suscipit aspernatur repudiandae cumque veritatis nobis earum pariatur magnam!"
-    messagetosend={
-        'title':'Hello World',
-        'data':data,
-        'error':'Note Saved Successfully!!!'
-    }
-    return render(request,'Home/index.html',messagetosend)
+    return render(request,'Home/index.html')
+    
 def PrivacyPolicy(request):
     return render(request,'Home/privacypolicy.html')
 
@@ -61,6 +60,8 @@ def MyNotes(request):
 def SingleNotes(request,id):
     if not id:
         return redner(request,"Home/404.html")
+    if not id.isDigit():
+    	return render(request,"Home/404.html")
 
 
 
