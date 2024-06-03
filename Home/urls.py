@@ -8,5 +8,5 @@ urlpatterns = [
     path('contact/',views.ContactUs,name='contact'),
     path('privacypolicy/',views.PrivacyPolicy,name='privacypolicy'),
     path("mynotes/",views.MyNotes,name='mynotes'),
-    path("singlenotes/<id>",views.SingleNotes,name="singlenotes"),
+    path("singlenotes/<int:id>",views.SingleNotes,name="singlenotes"),
 ]

@@ -1,9 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render,HttpResponse
 from Home.models import Contact,UserNotes
 
 # Create your views here.
 def Home(request):
-    # return HttpResponse("Hello World")
     if request.method == 'POST':
         notetitle = (request.POST['NoteTitle']).strip()
         notebody = (request.POST['NoteContent']).strip()
@@ -17,7 +16,12 @@ def Home(request):
                 print(e)
                 return render(request,'Home/index.html',{'error':' * Something went wrong. Please try again later.'})
         else:
-            return render(request,'Home/index.html',{'error':' * Please fill all the fields.'})
+            data={
+                'notetitle':notetitle,
+                'notecontent':notebody,
+                'error':'* Please fill all the fields.'
+            }
+            return render(request,'Home/index.html',data)
 
     data ="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non optio, similique eveniet a ipsa deleniti facere ipsum veritatis deserunt rerum. Dolorem suscipit aspernatur repudiandae cumque veritatis nobis earum pariatur magnam!"
     messagetosend={
@@ -54,5 +58,15 @@ def ContactUs(request):
 def MyNotes(request):
     return render(request,'Home/mynotes.html')
 
-def SingleNotes(request,int):
+def SingleNotes(request,id):
+    if not id:
+        return redner(request,"Home/404.html")
+
+
+
+    # usernotes = UserNotes. 
+
+    # usernotes=UserNotes(user=request.user,title=notetitle,note=notebody)
+    #             usernotes.save()
+    #             return render(request,'Home/index.html',{'success':'Note saved successfully.'})
     return render(request,"Home/SingleNotesView.html")
