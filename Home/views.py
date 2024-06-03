@@ -20,7 +20,12 @@ def Home(request):
             return render(request,'Home/index.html',{'error':' * Please fill all the fields.'})
 
     data ="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non optio, similique eveniet a ipsa deleniti facere ipsum veritatis deserunt rerum. Dolorem suscipit aspernatur repudiandae cumque veritatis nobis earum pariatur magnam!"
-    return render(request,'Home/index.html',{'data':data})
+    messagetosend={
+        'title':'Hello World',
+        'data':data,
+        'error':'Note Saved Successfully!!!'
+    }
+    return render(request,'Home/index.html',messagetosend)
 def PrivacyPolicy(request):
     return render(request,'Home/privacypolicy.html')
 
