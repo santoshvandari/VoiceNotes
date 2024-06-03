@@ -38,6 +38,13 @@
                     </div>
                     <div class="NotesWriting">
                         <form method="post">
+                            <div class="error">
+                                <p>
+                                {% if error %}
+                                        {{error}}
+                                        {% endif %}
+                                </p>
+                            </div>
                             {%csrf_token %}
                         <div class="NotesWritingContainer">
                             <div class="NoteTitle">

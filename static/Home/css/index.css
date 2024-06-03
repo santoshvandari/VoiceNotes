@@ -104,6 +104,10 @@ nav ul li a:hover::before{
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
+div.error p{
+    color: red;
+    font-size: 20px;
+}
 .NoteTitle{
     width: 100%;
     padding: 10px;
