@@ -1,12 +1,12 @@
-from django.shortcuts import render,HttpResponse
+from django.shortcuts import render,redirect
 from Home.models import Contact,UserNotes
 
 # Create your views here.
+# Completed 
 def Home(request):
     if request.method == 'POST':
         notetitle = (request.POST['NoteTitle']).strip()
         notebody = (request.POST['NoteContent']).strip()
-        print(notetitle,notebody)
         if notetitle and notebody:
             try:
                 usernotes=UserNotes(user=request.user,title=notetitle,note=notebody)
@@ -37,6 +37,7 @@ def About(request):
     return render(request,'Home/about.html')
 
 
+# Completed 
 def ContactUs(request):
     if request.method == 'POST':
         name = (request.POST['fullname']).strip()
@@ -54,20 +55,56 @@ def ContactUs(request):
             return render(request,'Home/contact.html',{'error':' * Please fill all the fields.'})
     return render(request,'Home/contact.html')
 
+
+
+# Not Completed
 def MyNotes(request):
+    # if not logged in, then redirect to loggin 
     return render(request,'Home/mynotes.html')
+
+
+
+# Not Completed Too
 
 def SingleNotes(request,id):
     if not id:
-        return redner(request,"Home/404.html")
+        return redirect('404/')
     if not id.isDigit():
-    	return render(request,"Home/404.html")
+    	return redirect('404/')
 
-
-
-    # usernotes = UserNotes. 
+    try:
+        usernotes = usernotes.objects.filter(username=request.user,id=id)
+        if usernotes:
+            print(usernotes)
+        else:
+            return redirect('404')
+    except Exception as ex:
+        return redirect("404")
 
     # usernotes=UserNotes(user=request.user,title=notetitle,note=notebody)
     #             usernotes.save()
     #             return render(request,'Home/index.html',{'success':'Note saved successfully.'})
     return render(request,"Home/SingleNotesView.html")
+
+
+
+
+def Custom404(request):
+    return render(request,"Home/404.html")
+
+
+# Code Not Completed
+def NotesDelete(request,id):
+    if not id:
+        return redirect('404/')
+    if not id.isDigit():
+    	return redirect('404/')
+
+
+
+# Not Completed Code
+def NotesEdit(request,id):
+    if not id:
+        return redirect('404/')
+    if not id.isDigit():
+    	return redirect('404/')
