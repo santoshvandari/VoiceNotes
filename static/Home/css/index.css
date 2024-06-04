@@ -53,6 +53,9 @@ nav ul li a:hover::before{
 /* Header Section Ends Here  */
 /* Main Section Start here */
 /* Notes Section Start Here */
+main{
+    min-height: 100vh;
+}
 .NoteContainer{
     display: flex;
     justify-content: center;

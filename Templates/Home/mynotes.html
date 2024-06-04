@@ -1,29 +1,8 @@
-<!-- Developing the Voice Note App that will help you to take notes by voice. -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Voice Notes</title>
+{% extends "Home/base.html" %}
+{% block linkfiles %}
     <link rel="stylesheet" href="/static/Home/css/mynotes.css">
-    <script defer src="/static/Home/js/mynotes.js"></script>
-</head>
-<body>
-    <!-- <h1>Hello World</h1> -->
-    <header>
-        <nav>
-            <div class="logo"> <h1>Voice Notes</h1></div>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/mynotes">MyNotes</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/contact">Contact</a></li>
-                <li><a href="privacypolicy">Privacy Policy</a></li>
-                <li><a href="/login">Login</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
+{% endblock linkfiles %}
+{% block mainsection %}
         <section class="MyNotesSection" id="MyNotesSection">
             <div class="NotesContainer">
                 <h3>Saved Notes List</h3>
@@ -38,14 +17,15 @@
                         </thead>
                         <tbody>
                             {% if error %}
-                            <tr colspan="3">{{error}}</tr>
+                            <tr>
+                                <td colspan='3'>{{error}}</td></tr>
                             {% endif %}
                             {% if notes %}
                             {% for note in notes %}
                             <tr>
                                 <td>{{forloop.counter}}</td>
                                 <td>{{note.title}}</td>
-                                <td><a href="#">View</a> | <a href="#">Edit</a> | <a href="#">Delete</a></td>
+                                <td><a href="/singlenotes/{{note.id}}">View</a> | <a href="/delete/{{note.id}}">Delete</a></td>
                             </tr>
                             {% endfor %}
                             
@@ -88,9 +68,4 @@
             </div>
 
         </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 Voice Notes</p>
-    </footer>
-</body>
-</html>
+{% endblock mainsection %}

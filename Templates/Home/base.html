@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Notes</title>
+    {% block linkfiles %}
+    {% comment %} <link rel="stylesheet" href="/static/Home/css/index.css">
+    <script defer src="/static/Home/js/index.js"></script> {% endcomment %}
+    {% endblock linkfiles %}
+
+
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"> <h1>Voice Notes</h1></div>
+            <ul>
+                <li><a href="/">Home</a></li>
+                {% if user.is_authenticated %}
+                <li><a href="/mynotes">MyNotes</a></li>
+                {% endif %}
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="privacypolicy">Privacy Policy</a></li>
+                {% if user.is_authenticated %}
+                <li><a href="/logout">Logout</a></li>
+                {% endif %}
+                {% if not user.is_authenticated %}
+                <li><a href="/login">Login</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block mainsection %}{% endblock mainsection %}
+    </main>
+    <footer>
+        <p>&copy; 2024 Voice Notes</p>
+    </footer>
+</body>
+</html>
