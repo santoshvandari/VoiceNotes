@@ -8,6 +8,13 @@
                 <div class="NoteWrapper">
                     <div class="NotesWriting">
                         <form method="post">
+                            <div class="status">
+                                {% if success %}
+                                    <p class='success'>{{success}}</p>
+                                {% elif error %}
+                                    <p class='error'>{{error}}</p>
+                                {% endif %}
+                            </div>
                             {%csrf_token %}
                         <div class="NotesWritingContainer">
                             <div class="NoteTitle">
@@ -20,11 +27,8 @@
                         <div class="NotesWritingOptions">
 
                             <div class="SaveNote">
-                                <button id="SaveNoteBtn" type="submit">Save Note</button>
+                                <button id="SaveNoteBtn" type="submit">Update Note</button>
                             </div>
-                            <!-- <div class="DeleteNote">
-                                <button id="DeleteNoteBtn">Delete Note</button>
-                            </div>  -->
                         </div>
                     </form>
                     </div>

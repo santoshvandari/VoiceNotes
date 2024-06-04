@@ -88,22 +88,27 @@ def SingleNotes(request,id):
                 usernotes.title = notetitle
                 usernotes.note = notebody
                 usernotes.save()
-                return render(request,'Home/index.html',{'success':'Note Updated successfully.'})
+                data={
+                    'title':notetitle,
+                    'note':notebody,
+                    'success':'Note Updated Successfully.'
+                }
+                return render(request,'Home/SingleNotesView.html',data)
             except Exception as e:
                 data={
-                    'notetitle':notetitle,
-                    'notecontent':notebody,
+                    'title':notetitle,
+                    'note':notebody,
                     'error':'* Failed to Update Note. Please try again later.'
                 }
                 print(e)
-                return render(request,'Home/index.html',data)
+                return render(request,'Home/SingleNotesView.html',data)
         else:
             data={
-                'notetitle':notetitle,
-                'notecontent':notebody,
+                'title':notetitle,
+                'note':notebody,
                 'error':'* Please fill all the fields.'
             }
-            return render(request,'Home/index.html',data)
+            return render(request,'Home/SingleNotesView.html',data)
 
     if id:
         try:
@@ -119,10 +124,6 @@ def SingleNotes(request,id):
         except Exception as ex:
             print(ex)
             return redirect("/404")
-
-    # usernotes=UserNotes(user=request.user,title=notetitle,note=notebody)
-    #             usernotes.save()
-    #             return render(request,'Home/index.html',{'success':'Note saved successfully.'})
     return redirect("/404")
 
 
