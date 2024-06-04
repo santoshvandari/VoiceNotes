@@ -62,23 +62,18 @@ def ContactUs(request):
 
 # Not Completed
 def MyNotes(request):
-    # if not logged in, then redirect to loggin 
     if not request.user.is_authenticated:
         return redirect('404/')
-    # Get all the notes of the user
-    usernotes = UserNotes.objects.filter(user=request.user)
-    if usernotes:
-        # print(usernotes)
-        for note in usernotes:
-            print(note.title)
-            print(note.note)
-
-    else:
-        return render(request,'Home/mynotes.html',{'error':'No notes found.'})
-
-
-
-
+    try:
+        usernotes = UserNotes.objects.filter(user=request.user)
+        if usernotes:
+            # print(usernotes)
+            return render(request,'Home/mynotes.html',{'notes':usernotes})
+        else:
+            return render(request,'Home/mynotes.html',{'error':'No notes found.'})
+    except Exception as ex:
+        print(ex)
+        return render(request,'Home/mynotes.html',{'error':'Something went wrong. Please try again later.'})
     return render(request,'Home/mynotes.html')
 
 
