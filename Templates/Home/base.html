@@ -4,12 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Voice Notes</title>
+    <link rel="stylesheet" href="/static/Home/css/base.css">
     {% block linkfiles %}
-    {% comment %} <link rel="stylesheet" href="/static/Home/css/index.css">
-    <script defer src="/static/Home/js/index.js"></script> {% endcomment %}
     {% endblock linkfiles %}
-
-
 </head>
 <body>
     <header>
@@ -20,9 +17,9 @@
                 {% if user.is_authenticated %}
                 <li><a href="/mynotes">MyNotes</a></li>
                 {% endif %}
-                <li><a href="/about">About</a></li>
+                {% comment %} <li><a href="/about">About</a></li> {% endcomment %}
                 <li><a href="/contact">Contact</a></li>
-                <li><a href="privacypolicy">Privacy Policy</a></li>
+                {% comment %} <li><a href="privacypolicy">Privacy Policy</a></li> {% endcomment %}
                 {% if user.is_authenticated %}
                 <li><a href="/logout">Logout</a></li>
                 {% endif %}
