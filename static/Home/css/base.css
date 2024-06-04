@@ -51,6 +51,10 @@ nav ul li a:hover::before{
     width: 100%;
 }
 /* Header Section Ends Here  */
+/* Notes Section Start Here */
+main{
+    min-height: 100vh;
+}
 /* Footer Section Start Here */
 footer{
     background-color: #577B8D;
