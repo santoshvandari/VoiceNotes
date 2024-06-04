@@ -28,23 +28,15 @@
         <section class="NoteSection" id="NoteSection">
             <div class="NoteContainer">
                 <div class="NoteWrapper">
-                    <div class="NotesOptions">
-                        <div class="VoiceNote">
-                            <button id="VoiceNoteBtn">Start</button>
-                            <div class="RecordingStatus">
-                                <p id="RecordingStatus"></p>
-                            </div>
-                        </div>
-                    </div>
                     <div class="NotesWriting">
                         <form method="post">
                             {%csrf_token %}
                         <div class="NotesWritingContainer">
                             <div class="NoteTitle">
-                                <input type="text" name="NoteTitle" id="NoteTitle" placeholder="Title">
+                                <input type="text" name="NoteTitle" id="NoteTitle" placeholder="Title" value="{{title}}">
                             </div>
                             <div class="NoteBody">
-                                <textarea name="NoteContent" id="NoteContent" cols="30" rows="10" placeholder="Write your note here">{{data}}</textarea>
+                                <textarea name="NoteContent" id="NoteContent" cols="30" rows="10" placeholder="Write your note here">{{note}}</textarea>
                             </div>                       
                         </div>
                         <div class="NotesWritingOptions">

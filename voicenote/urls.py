@@ -8,4 +8,4 @@ urlpatterns = [
 
 ]
 
-handler404 = 'Home.views.Custom404'
+# handler404 = 'Home.views.Custom404'
