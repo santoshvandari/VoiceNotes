@@ -95,6 +95,9 @@ def Custom404(request):
 
 # Code Not Completed
 def NotesDelete(request,id):
+    # Check the user is authenticated or not 
+    if not request.user.is_authenticated:
+        return redirect('404/')
     if not id:
         return redirect('404/')
     if not id.isDigit():
@@ -104,6 +107,8 @@ def NotesDelete(request,id):
 
 # Not Completed Code
 def NotesEdit(request,id):
+    if not request.user.is_authenticated:
+        return redirect('404/')
     if not id:
         return redirect('404/')
     if not id.isDigit():
