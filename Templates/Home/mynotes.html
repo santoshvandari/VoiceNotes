@@ -25,6 +25,67 @@
     </header>
     <main>
         <section class="MyNotesSection" id="MyNotesSection">
+            <div class="NotesContainer">
+                <h3>Saved Notes List</h3>
+                <div class="NotesWrapper">
+                    <table border="1">
+                        <thead>
+                            <tr>
+                                <th>S.N.</th>
+                                <th>Title</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% if error %}
+                            <tr colspan="3">{{error}}</tr>
+                            {% endif %}
+                            {% if notes %}
+                            {% for note in notes %}
+                            <tr>
+                                <td>{{forloop.counter}}</td>
+                                <td>{{note.title}}</td>
+                                <td><a href="#">View</a> | <a href="#">Edit</a> | <a href="#">Delete</a></td>
+                            </tr>
+                            {% endfor %}
+                            
+                            {% endif %}
+
+                            {% comment %} <tr>
+                                <td>1</td>
+                                <td>My Temporarasdfadsfasdy Notes Taken For the Test</td>
+                                <td><a href="#">View</a> | <a href="#">Edit</a> | <a href="#">Delete</a></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>My Second Notes</td>
+                                <td><a href="#">View</a> | <a href="#">Edit</a> | <a href="#">Delete</a></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Third Notes from teh Database</td>
+                                <td><a href="#">View</a> | <a href="#">Edit</a> | <a href="#">Delete</a></td>
+                            </tr>                            
+                            <tr>
+                                <td>4</td>
+                                <td>My Temporary Notes Taken For the Test</td>
+                                <td><a href="#">View</a> | <a href="#">Edit</a> | <a href="#">Delete</a></td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>My Second Notes</td>
+                                <td><a href="#">View</a> | <a href="#">Edit</a> | <a href="#">Delete</a></td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Third Notes from teh Database</td>
+                                <td><a href="#">View</a> | <a href="#">Edit</a> | <a href="#">Delete</a></td>
+                            </tr> {% endcomment %}
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
 
         </section>
     </main>

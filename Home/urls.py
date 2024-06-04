@@ -7,4 +7,7 @@ urlpatterns = [
     path('about/',views.About,name='about'),
     path('contact/',views.ContactUs,name='contact'),
     path('privacypolicy/',views.PrivacyPolicy,name='privacypolicy'),
+    path("mynotes/",views.MyNotes,name='mynotes'),
+    path("singlenotes/<int:id>",views.SingleNotes,name="singlenotes"),
+    path("404/",views.Custom404,name='custom404'),
 ]

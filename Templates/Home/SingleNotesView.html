@@ -38,24 +38,17 @@
                     </div>
                     <div class="NotesWriting">
                         <form method="post">
-                            <div class="status">
-                                {% if success %}
-                                    <p class='success'>{{success}}</p>
-                                {% elif error %}
-                                    <p class='error'>{{error}}</p>
-                                {% endif %}
-                            </div>
                             {%csrf_token %}
                         <div class="NotesWritingContainer">
                             <div class="NoteTitle">
-
-                                <input type="text" name="NoteTitle" id="NoteTitle" placeholder="Title" value='{{notetitle}}'>
+                                <input type="text" name="NoteTitle" id="NoteTitle" placeholder="Title">
                             </div>
                             <div class="NoteBody">
-                                <textarea name="NoteContent" id="NoteContent" cols="30" rows="10" placeholder="Write your note here">{{noteconent}}</textarea>
+                                <textarea name="NoteContent" id="NoteContent" cols="30" rows="10" placeholder="Write your note here">{{data}}</textarea>
                             </div>                       
                         </div>
                         <div class="NotesWritingOptions">
+
                             <div class="SaveNote">
                                 <button id="SaveNoteBtn" type="submit">Save Note</button>
                             </div>

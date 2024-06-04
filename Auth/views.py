@@ -19,6 +19,7 @@ def log_in(request):
                 return render(request,'Auth/login.html',{'error':'* Invalid Password'})
         else:
             return render(request,'Auth/login.html',{'error':'* Invalid Username'})
+    # If the User is loggedin then sever the Home Page.
     return render(request,'Auth/login.html')
 
 def register(request):
@@ -44,7 +45,8 @@ def register(request):
             return redirect('home')
         except:
             return render(request,'Auth/register.html',{'error':'* An error occurred'})
-        
+    
+    # if the user is loggedin then server the Home page 
 
     return render(request,'Auth/register.html')
 
