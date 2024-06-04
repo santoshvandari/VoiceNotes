@@ -30,15 +30,6 @@ def Home(request):
     return render(request,'Home/index.html')
 
 
-# Completed 
-def PrivacyPolicy(request):
-    return render(request,'Home/privacypolicy.html')
-
-
-# Completed
-def About(request):
-    return render(request,'Home/about.html')
-
 
 # Completed 
 def ContactUs(request):

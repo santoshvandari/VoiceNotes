@@ -1,15 +1,17 @@
-<!-- Developing the Voice Note App that will help you to take notes by voice. -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Voice Notes</title>
-    <link rel="stylesheet" href="/static/Home/css/index.css">
-    <script defer src="/static/Home/js/index.js"></script>
+    {% block linkfiles %}
+    {% comment %} <link rel="stylesheet" href="/static/Home/css/index.css">
+    <script defer src="/static/Home/js/index.js"></script> {% endcomment %}
+    {% endblock linkfiles %}
+
+
 </head>
 <body>
-    <!-- <h1>Hello World</h1> -->
     <header>
         <nav>
             <div class="logo"> <h1>Voice Notes</h1></div>
@@ -31,51 +33,7 @@
         </nav>
     </header>
     <main>
-        <!-- <h1>Home Section Start Here</h1> -->
-        <section class="NoteSection" id="NoteSection">
-            <div class="NoteContainer">
-                <div class="NoteWrapper">
-                    <div class="NotesOptions">
-                        <div class="VoiceNote">
-                            <button id="VoiceNoteBtn">Start</button>
-                            <div class="RecordingStatus">
-                                <p id="RecordingStatus"></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="NotesWriting">
-                        <form method="post">
-                            <div class="status">
-                                {% if success %}
-                                    <p class='success'>{{success}}</p>
-                                {% elif error %}
-                                    <p class='error'>{{error}}</p>
-                                {% endif %}
-                            </div>
-                            {%csrf_token %}
-                        <div class="NotesWritingContainer">
-                            <div class="NoteTitle">
-
-                                <input type="text" name="NoteTitle" id="NoteTitle" placeholder="Title" value='{{notetitle}}'>
-                            </div>
-                            <div class="NoteBody">
-                                <textarea name="NoteContent" id="NoteContent" cols="30" rows="10" placeholder="Write your note here">{{noteconent}}</textarea>
-                            </div>                       
-                        </div>
-                        <div class="NotesWritingOptions">
-                            {% if user.is_authenticated %}
-                            <div class="SaveNote">
-                                <button id="SaveNoteBtn" type="submit">Save Note</button>
-                            </div>
-                            {% endif %}
-                        </div>
-                    </form>
-                    </div>
-
-                </div>
-            </div>
-
-        </section>
+        {% block mainsection %}{% endblock mainsection %}
     </main>
     <footer>
         <p>&copy; 2024 Voice Notes</p>

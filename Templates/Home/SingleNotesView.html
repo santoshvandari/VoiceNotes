@@ -1,30 +1,8 @@
-<!-- Developing the Voice Note App that will help you to take notes by voice. -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Voice Notes</title>
+{% extends "Home/base.html" %}
+{% block linkfiles %}
     <link rel="stylesheet" href="/static/Home/css/index.css">
-    <script defer src="/static/Home/js/index.js"></script>
-</head>
-<body>
-    <!-- <h1>Hello World</h1> -->
-    <header>
-        <nav>
-            <div class="logo"> <h1>Voice Notes</h1></div>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/mynotes">MyNotes</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/contact">Contact</a></li>
-                <li><a href="privacypolicy">Privacy Policy</a></li>
-                <li><a href="/login">Login</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <!-- <h1>Home Section Start Here</h1> -->
+{% endblock linkfiles %}
+{% block mainsection %}
         <section class="NoteSection" id="NoteSection">
             <div class="NoteContainer">
                 <div class="NoteWrapper">
@@ -56,8 +34,4 @@
 
         </section>
     </main>
-    <footer>
-        <p>&copy; 2024 Voice Notes</p>
-    </footer>
-</body>
-</html>
+{% endblock mainsection %}
