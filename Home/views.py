@@ -28,11 +28,14 @@ def Home(request):
             }
             return render(request,'Home/index.html',data)
     return render(request,'Home/index.html')
-    
+
+
+# Completed 
 def PrivacyPolicy(request):
     return render(request,'Home/privacypolicy.html')
 
 
+# Completed
 def About(request):
     return render(request,'Home/about.html')
 
@@ -60,6 +63,22 @@ def ContactUs(request):
 # Not Completed
 def MyNotes(request):
     # if not logged in, then redirect to loggin 
+    if not request.user.is_authenticated:
+        return redirect('404/')
+    # Get all the notes of the user
+    usernotes = UserNotes.objects.filter(user=request.user)
+    if usernotes:
+        # print(usernotes)
+        for note in usernotes:
+            print(note.title)
+            print(note.note)
+
+    else:
+        return render(request,'Home/mynotes.html',{'error':'No notes found.'})
+
+
+
+
     return render(request,'Home/mynotes.html')
 
 
@@ -88,8 +107,8 @@ def SingleNotes(request,id):
 
 
 
-
-def Custom404(request):
+# Custom 404 Page
+def Custom404(request,exception):
     return render(request,"Home/404.html")
 
 
