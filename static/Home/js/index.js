@@ -3,7 +3,7 @@
     const NoteContent = document.getElementById("NoteContent");
     const RecordingStatus = document.getElementById("RecordingStatus");
     const RecordingLanguage = document.getElementById("RecordingLangauge");
-    const recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition || window.mozSpeechRecognition || window.msSpeechRecognition)();
+    let recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition || window.mozSpeechRecognition || window.msSpeechRecognition)();
     recognition.lang = 'en-US';
     // for the nepali audio 
     RecordingLanguage.addEventListener('change',(e)=>{
@@ -29,9 +29,10 @@
             if (event.results[i].isFinal) {
                 finalTranscript += event.results[i][0].transcript.trim() + (recognition.lang=="np-NP"? "। " : ". ");
             } else {
-                interimTranscript += event.results[i][0].transcript;
+                    interimTranscript += event.results[i][0].transcript;
             }
         }
+        console.log(recognition.lang);
         NoteContent.value = finalTranscript + interimTranscript;
     };
 
@@ -51,5 +52,4 @@
             recognition.start();
         }
     });
-    console.log("Hello World")
 })();

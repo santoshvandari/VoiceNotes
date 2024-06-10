@@ -11,6 +11,26 @@
     width: 100%;
     flex-direction: column;
 }
+/* Language Options  */
+div.languageOption{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+div.languageOption select{
+    padding: 10px;
+    font-size: 20px;
+    border: 2px solid #577B8D;
+    outline: none;
+    border-radius: 5px;
+}
+div.languageOption select option{
+    padding: 10px;
+    font-size: 20px;
+    border: 2px solid #577B8D;
+    outline: none;
+    border-radius: 5px;
+}
 /* Notes Options  */
 .NotesOptions{
     padding: 5px 10px;
