@@ -54,6 +54,7 @@ nav ul li a:hover::before{
 /* Notes Section Start Here */
 main{
     min-height: 100vh;
+    padding: 0 50px;
 }
 /* Footer Section Start Here */
 footer{
